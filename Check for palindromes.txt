@@ -1,0 +1,30 @@
+
+function palindrome(str) {
+  var arr = []; //where we break down the arguments
+  var compArr = []; //used for comparison to secondCompApp
+  var secondCompArr = []; //used for comparison to compArr
+  var notOK = /[A-Za-z0-9]/; //Regex, OMG!!11, /w not an option due to counting "_"
+  
+  str = str.toLowerCase(); //gets input to LC
+  arr = str.split(""); //loads the string into the arr
+    
+  for (var i = 0; i < arr.length;i++) {
+    if (notOK.test(arr[i]) !== false) { //only moves compliant characters 
+      compArr.push(arr[i]);  //loads the chars left to right the normal way
+      secondCompArr.unshift(arr[i]); //loads them in right to left
+    }
+  }
+  
+  
+  for (var j = 0; j < compArr.length; j++) { // does all the checking to see 
+    if (compArr[j] !== secondCompArr[j]) { //if these two arrays are identical
+      return false;
+    }
+    
+  } 
+  
+  return true; 
+  
+}
+
+palindrome("not a palindrome");

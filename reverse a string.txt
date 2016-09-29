@@ -1,0 +1,12 @@
+
+function reverseString(str) {
+  var arr = [];
+  arr = str.split("");
+  arr = arr.reverse();
+  arr = arr.join("");
+  return arr;
+}
+
+reverseString("hello");
+
+//Not much to this one. shoot the string off to an array, split it up, reverse the contents of the array, join each of the array positions together and then shoot them back out!

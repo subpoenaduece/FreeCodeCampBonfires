@@ -1,0 +1,14 @@
+
+function factorialize(num) {
+ var temp = 1;
+  
+ for (var i = num; i > 0; i--) {
+   temp *= i;
+ }
+  
+  return temp;
+}
+
+factorialize(5);
+
+// Still on the easy ones. We're just running a for loop and multiplying our storange variable "temp in our case" by the iteration number. I chose a decrementing loop because it's more fun that way!
