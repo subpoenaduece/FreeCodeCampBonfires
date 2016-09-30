@@ -1,0 +1,10 @@
+
+function confirmEnding(str, target) {
+  var endStart = str.length - target.length;  //equals the length of the substring at the end of the string we're searching
+  if (str.substring(endStart, str.length) === target) {
+    return true;
+  }
+    return false;
+}
+
+confirmEnding("Bastian", "n");
