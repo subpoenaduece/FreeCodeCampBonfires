@@ -1,0 +1,16 @@
+
+function mutation(bar) {
+  
+  bar[0] = bar[0].toLowerCase(); //lowercase both of the arguments
+  bar[1] = bar[1].toLowerCase(); //and don't forget the parenthesis...
+  
+  for (var i = 0; i < bar[1].length; i++) {
+    if (bar[0].indexOf(bar[1].charAt(i)) === -1) { //cycle through element at [1] letter by letter, if not found in element[0], return false
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+mutation(["hello", "hey"]);
