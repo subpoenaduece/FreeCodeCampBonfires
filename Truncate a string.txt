@@ -1,0 +1,23 @@
+
+function truncateString(str, num) {
+  var strOut;
+  
+  if (str.length <= num) { //return string if shorter than truncate max
+    return str;
+  }
+  
+  if (num <= 3) { //handles string requests with max <= 3
+    strOut = str.substring(0,num);
+    strOut += "...";
+  }
+  
+  else { //handles all other string requests
+    strOut = str.substring(0,num - 3);
+    strOut += "...";
+  }
+  
+  return strOut;
+    
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 3);

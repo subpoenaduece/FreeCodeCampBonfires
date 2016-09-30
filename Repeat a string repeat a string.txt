@@ -1,0 +1,12 @@
+
+
+
+function repeatStringNumTimes(str, num) {
+  var strOut = "";
+  for (var i = 0; i < num; i++) {
+    strOut += str;//add str to string out, reiterate a number of times equal to num
+  }
+  return strOut;
+}
+
+repeatStringNumTimes("abc", 3);
