@@ -1,0 +1,23 @@
+
+function largestOfFour(arr) {
+  var storArr = []; // Our storage array
+  var largest; // temp variable to hold largest value in sub array
+  for (var i = 0; i < arr.length; i++) { // Iterate through top array
+    largest = 0;  //reset comparison variable
+    for (var j = 0; j < arr[i].length; j++) { //Iterate through each sub array
+      
+      if (arr[i][j] > largest) { //bigger than the largest encountered value in the sub array so far?
+        largest = arr[i][j];
+      }
+      
+      if (j + 1 == arr[i].length) {
+         storArr.push(largest);  //push the largest value encountered in the sub array into the storage array
+      } 
+    }
+  }
+  
+  
+  return storArr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);

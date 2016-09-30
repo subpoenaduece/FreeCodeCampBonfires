@@ -1,0 +1,25 @@
+
+function titleCase(str) {
+  var words = [];
+  words = str.split(""); //split the string up into letters
+  words[0] = words[0].toUpperCase(); //Capitalize the first letter
+  
+  for (var i = 1; i < words.length; i++) {
+    
+    if (words[i - 1] === " ")
+    {
+      words[i] = words[i].toUpperCase(); //If the letter is preceded by a string, capitalize it
+    }
+    
+    else
+    {
+      words[i] = words[i].toLowerCase(); //otherwise, lowercase it
+    }
+  }
+  
+  str = words.join("");
+  
+  return str;
+}
+
+titleCase("I'm a little tea pot");
