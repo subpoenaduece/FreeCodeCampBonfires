@@ -1,0 +1,31 @@
+
+function rot13(str) { // LBH QVQ VG!
+  var arr = [];
+  var storArr = []; // I used this because the program was giving me difficulties using just one array :(.
+  for (var i = 0; i < str.length; i++) {
+    if (str.charCodeAt(i) > 64 && str.charCodeAt(i) < 78) { //Handles A-M
+      arr.push(str.charCodeAt(i) + 13);
+    }
+    
+    else if (str.charCodeAt(i) < 91 && str.charCodeAt(i) > 77) { //Handles N-Z
+      arr.push(str.charCodeAt(i) - 13);
+    }
+    
+    else {
+      arr.push(str.charCodeAt(i));
+    }
+    
+  for (var j = 0; j < arr.length; j++) {  //Handles all non alpha characters
+    storArr[j] = String.fromCharCode(arr[j]);
+  }
+
+  }
+  
+  var returnStr = storArr.join("");
+  
+  return returnStr;
+  
+}
+
+// Change the inputs below to test
+rot13("LBH QVQ VG");

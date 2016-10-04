@@ -1,0 +1,13 @@
+
+function bouncer(arr) {
+  var filtered = arr.filter(isFalse);
+  return filtered;
+}
+
+function isFalse(val) {
+  if (val) { //If the value is "true" e.g. returns != -1, return the value
+    return val;
+  }
+}
+
+bouncer([7, null, 0, NaN, undefined, ""]);
