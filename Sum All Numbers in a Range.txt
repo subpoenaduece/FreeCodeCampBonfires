@@ -1,0 +1,25 @@
+
+function sumAll(arr) {
+  var largest;
+  var smallest;
+  var total = 0;
+  
+  if (arr[0] > arr[1]) { // Find the biggest number and assign it to "largest". Assign the other to "smallest".
+    largest = arr[0];
+    smallest = arr[1];
+  }
+  
+  else {
+    largest = arr[1];
+    smallest = arr[0];
+  }
+  
+  for (var i = smallest; i <= largest; i++) {
+    total += i;
+    console.log(total);
+  }
+  
+  return total;
+}
+
+sumAll([1, 4]);
